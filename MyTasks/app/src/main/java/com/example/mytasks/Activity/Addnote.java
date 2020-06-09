@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.mytasks.Manager.database;
+
 import com.example.mytasks.Model.task;
 import com.example.mytasks.R;
 
@@ -15,9 +15,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Addnote extends BaseActivity{
-    Button add;
-    TextView name,note;
-    database db;
+    private Button add;
+    private TextView name,note;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +24,6 @@ public class Addnote extends BaseActivity{
         add = findViewById(R.id.addnote);
         name = findViewById(R.id.name);
         note = findViewById(R.id.note);
-        db = new database(getApplicationContext());
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,14 +33,15 @@ public class Addnote extends BaseActivity{
                 else{
                     Calendar c = Calendar.getInstance();
                     SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
-                    task temp = new task();
-                    temp.setTime(sdf.format(c.getTime()));
-                    temp.setId(c.getTime().toString());
-                    temp.setName(name.getText().toString());
-                    temp.setNote(note.getText().toString());
-                    db.addvalue(temp);
-                    Intent i = new Intent(Addnote.this,MainActivity.class);
-                    startActivity(i);
+                    Intent i = new Intent(Addnote.this,StartActivity.class);
+                    task temp = new task(note.getText().toString(),"0",sdf.format(c.getTime()),name.getText().toString());
+                    i.putExtra("taskname",temp.getName());
+                    i.putExtra("taskid",temp.getId());
+                    i.putExtra("tasknote",temp.getNote());
+                    i.putExtra("taskcomp",temp.getComp());
+                    i.putExtra("tasktime",temp.getTime());
+                    setResult(1,i);
+                    finish();
                 }
             }
         });

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -53,7 +54,7 @@ public class tasklistadapter extends RecyclerView.Adapter<tasklistviewholder> {
         return taskArrayList.size();
     }
 
-    public void setProfessorsArrayList(List<task> list){
+    public void setnotesArrayList(List<task> list){
 //        participantsUserArrayList.clear();
         taskArrayList.addAll(list);
         notifyDataSetChanged();
@@ -70,5 +71,6 @@ public class tasklistadapter extends RecyclerView.Adapter<tasklistviewholder> {
 
     public interface CallBack {
         void onItemClick(int position, View view);
+        void onCheckClick(CheckBox c,task temp,View view);
     }
 }

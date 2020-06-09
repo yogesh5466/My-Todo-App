@@ -6,13 +6,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
-import android.widget.ToggleButton;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mytasks.Adapter.tasklistadapter;
-import com.example.mytasks.Manager.database;
 import com.example.mytasks.Model.task;
 import com.example.mytasks.R;
 
@@ -21,7 +19,6 @@ public class tasklistviewholder extends RecyclerView.ViewHolder {
 
     private TextView names,notes,time;
     private CheckBox tg;
-    private database db;
     private task temp;
 
     public tasklistviewholder(@NonNull View itemView, final tasklistadapter.CallBack callBack, final Context context, Activity activity) {
@@ -30,7 +27,6 @@ public class tasklistviewholder extends RecyclerView.ViewHolder {
         notes = itemView.findViewById(R.id.tasks);
         time = itemView.findViewById(R.id.time);
         tg =itemView.findViewById(R.id.toggle);
-        db=new database(context);
 
         itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -48,14 +44,8 @@ public class tasklistviewholder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View v)
             {
-                if(tg.isChecked())
-                {   temp.setComp("1");
-                    db.updatevalue(temp.getId(),temp);
-                }
-                else
-                {
-                    temp.setComp("0");
-                    db.updatevalue(temp.getId(),temp);
+                if (callBack != null) {
+                    callBack.onCheckClick(tg,temp,v);
                 }
             }
         });
@@ -67,7 +57,6 @@ public class tasklistviewholder extends RecyclerView.ViewHolder {
         names.setText(t.getName());
         notes.setText(t.getNote());
         time.setText(t.getTime());
-        Log.d("hello",t.getComp());
         if(t.getComp().matches("1")){
             tg.setChecked(true);
         }
