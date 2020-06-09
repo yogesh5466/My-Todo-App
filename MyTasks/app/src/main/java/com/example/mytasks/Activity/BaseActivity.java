@@ -31,12 +31,10 @@ public class BaseActivity extends AppCompatActivity {
     private Dialog progressBarDialog;
 
 
-
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        actionBar=getSupportActionBar();
+        actionBar = getSupportActionBar();
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
     }
 
@@ -54,8 +52,8 @@ public class BaseActivity extends AppCompatActivity {
         showProgress(R.string.loading);
     }
 
-    public void displayhomeasup(boolean dhb){
-        if(actionBar!=null)
+    public void displayhomeasup(boolean dhb) {
+        if (actionBar != null)
             actionBar.setDisplayHomeAsUpEnabled(dhb);
     }
 
@@ -73,7 +71,6 @@ public class BaseActivity extends AppCompatActivity {
             progressDialog = null;
         }
     }
-
 
 
     public void showLoadingDialog() {
@@ -112,7 +109,7 @@ public class BaseActivity extends AppCompatActivity {
     public void showWarningDialog(String message, final String name) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(message);
-        builder.setNegativeButton("CANCEL",null);
+        builder.setNegativeButton("CANCEL", null);
         builder.show();
     }
 
@@ -129,7 +126,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     public void showToast(String message) {
-        Toast mytoast = Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT);
+        Toast mytoast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT);
         mytoast.show();
     }
 

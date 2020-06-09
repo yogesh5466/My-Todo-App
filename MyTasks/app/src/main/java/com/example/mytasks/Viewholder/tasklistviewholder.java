@@ -17,7 +17,7 @@ import com.example.mytasks.R;
 
 public class tasklistviewholder extends RecyclerView.ViewHolder {
 
-    private TextView names,notes,time;
+    private TextView names, notes, time;
     private CheckBox tg;
     private task temp;
 
@@ -26,7 +26,7 @@ public class tasklistviewholder extends RecyclerView.ViewHolder {
         names = itemView.findViewById(R.id.names);
         notes = itemView.findViewById(R.id.tasks);
         time = itemView.findViewById(R.id.time);
-        tg =itemView.findViewById(R.id.toggle);
+        tg = itemView.findViewById(R.id.toggle);
 
         itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -42,10 +42,9 @@ public class tasklistviewholder extends RecyclerView.ViewHolder {
 
         tg.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 if (callBack != null) {
-                    callBack.onCheckClick(tg,temp,v);
+                    callBack.onCheckClick(tg, temp, v);
                 }
             }
         });
@@ -57,10 +56,9 @@ public class tasklistviewholder extends RecyclerView.ViewHolder {
         names.setText(t.getName());
         notes.setText(t.getNote());
         time.setText(t.getTime());
-        if(t.getComp().matches("1")){
+        if (t.getComp().matches("1")) {
             tg.setChecked(true);
-        }
-        else
+        } else
             tg.setChecked(false);
     }
 

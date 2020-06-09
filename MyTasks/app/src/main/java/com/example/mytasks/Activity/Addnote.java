@@ -14,9 +14,10 @@ import com.example.mytasks.R;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class Addnote extends BaseActivity{
+public class Addnote extends BaseActivity {
     private Button add;
-    private TextView name,note;
+    private TextView name, note;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,20 +28,19 @@ public class Addnote extends BaseActivity{
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(name.getText().toString().matches("")||note.getText().toString().matches("")){
-                    Toast.makeText(getApplicationContext(),"Enter a value please!!!",Toast.LENGTH_SHORT).show();
-                }
-                else{
+                if (name.getText().toString().matches("") || note.getText().toString().matches("")) {
+                    Toast.makeText(getApplicationContext(), "Enter a value please!!!", Toast.LENGTH_SHORT).show();
+                } else {
                     Calendar c = Calendar.getInstance();
-                    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
-                    Intent i = new Intent(Addnote.this,StartActivity.class);
-                    task temp = new task(note.getText().toString(),"0",sdf.format(c.getTime()),name.getText().toString());
-                    i.putExtra("taskname",temp.getName());
-                    i.putExtra("taskid",temp.getId());
-                    i.putExtra("tasknote",temp.getNote());
-                    i.putExtra("taskcomp",temp.getComp());
-                    i.putExtra("tasktime",temp.getTime());
-                    setResult(1,i);
+                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy, HH:mm");
+                    Intent i = new Intent(Addnote.this, StartActivity.class);
+                    task temp = new task(note.getText().toString(), "0", sdf.format(c.getTime()), name.getText().toString());
+                    i.putExtra("taskname", temp.getName());
+                    i.putExtra("taskid", temp.getId());
+                    i.putExtra("tasknote", temp.getNote());
+                    i.putExtra("taskcomp", temp.getComp());
+                    i.putExtra("tasktime", temp.getTime());
+                    setResult(1, i);
                     finish();
                 }
             }

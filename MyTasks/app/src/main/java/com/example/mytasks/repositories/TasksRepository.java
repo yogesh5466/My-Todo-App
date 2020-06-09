@@ -16,32 +16,32 @@ public class TasksRepository {
     private LiveData<List<task>> allnotes;
     private DatabaseDao databaseDao;
 
-    public TasksRepository(Application application){
+    public TasksRepository(Application application) {
         TaskDatabase taskDatabase = TaskDatabase.getInstance(application);
         databaseDao = taskDatabase.databaseDao();
         allnotes = databaseDao.getall();
     }
 
-    public void insert(task t){
+    public void insert(task t) {
         new InsertNoteAsyncTask(databaseDao).execute(t);
     }
 
-    public void update(task t){
+    public void update(task t) {
         new UpdateNoteAsyncTask(databaseDao).execute(t);
     }
 
-    public void delete(task t){
+    public void delete(task t) {
         new DeleteNoteAsyncTask(databaseDao).execute(t);
     }
 
-    public LiveData<List<task>> getall(){
+    public LiveData<List<task>> getall() {
         return allnotes;
     }
 
-    private static class InsertNoteAsyncTask extends AsyncTask<task,Void,Void> {
+    private static class InsertNoteAsyncTask extends AsyncTask<task, Void, Void> {
         private DatabaseDao databaseDao;
 
-        private InsertNoteAsyncTask(DatabaseDao databaseDao){
+        private InsertNoteAsyncTask(DatabaseDao databaseDao) {
             this.databaseDao = databaseDao;
         }
 
@@ -52,10 +52,10 @@ public class TasksRepository {
         }
     }
 
-    private static class UpdateNoteAsyncTask extends AsyncTask<task,Void,Void> {
+    private static class UpdateNoteAsyncTask extends AsyncTask<task, Void, Void> {
         private DatabaseDao databaseDao;
 
-        private UpdateNoteAsyncTask(DatabaseDao databaseDao){
+        private UpdateNoteAsyncTask(DatabaseDao databaseDao) {
             this.databaseDao = databaseDao;
         }
 
@@ -66,10 +66,10 @@ public class TasksRepository {
         }
     }
 
-    private static class DeleteNoteAsyncTask extends AsyncTask<task,Void,Void> {
+    private static class DeleteNoteAsyncTask extends AsyncTask<task, Void, Void> {
         private DatabaseDao databaseDao;
 
-        private DeleteNoteAsyncTask(DatabaseDao databaseDao){
+        private DeleteNoteAsyncTask(DatabaseDao databaseDao) {
             this.databaseDao = databaseDao;
         }
 

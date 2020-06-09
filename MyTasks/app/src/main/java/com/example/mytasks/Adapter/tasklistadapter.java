@@ -21,26 +21,26 @@ import java.util.List;
 
 public class tasklistadapter extends RecyclerView.Adapter<tasklistviewholder> {
 
-    private ArrayList<task> taskArrayList=new ArrayList<>();
+    private ArrayList<task> taskArrayList = new ArrayList<>();
     private Context context;
     private Activity activity;
     private CallBack callBack;
 
-    public tasklistadapter(Context context, Activity activity){
-        this.context=context;
-        this.activity=activity;
+    public tasklistadapter(Context context, Activity activity) {
+        this.context = context;
+        this.activity = activity;
     }
 
-    public void setCallBack(CallBack callBack){
-        this.callBack=callBack;
+    public void setCallBack(CallBack callBack) {
+        this.callBack = callBack;
     }
 
     @NonNull
     @Override
     public tasklistviewholder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        LayoutInflater layoutInflater=LayoutInflater.from(viewGroup.getContext());
-        View view=layoutInflater.inflate(R.layout.task_layout,viewGroup,false);
-        return new tasklistviewholder(view,callBack,context,activity);
+        LayoutInflater layoutInflater = LayoutInflater.from(viewGroup.getContext());
+        View view = layoutInflater.inflate(R.layout.task_layout, viewGroup, false);
+        return new tasklistviewholder(view, callBack, context, activity);
     }
 
     @Override
@@ -54,13 +54,12 @@ public class tasklistadapter extends RecyclerView.Adapter<tasklistviewholder> {
         return taskArrayList.size();
     }
 
-    public void setnotesArrayList(List<task> list){
-//        participantsUserArrayList.clear();
+    public void setnotesArrayList(List<task> list) {
         taskArrayList.addAll(list);
         notifyDataSetChanged();
     }
 
-    public task getItemByPosition(int position){
+    public task getItemByPosition(int position) {
         return taskArrayList.get(position);
     }
 
@@ -71,6 +70,7 @@ public class tasklistadapter extends RecyclerView.Adapter<tasklistviewholder> {
 
     public interface CallBack {
         void onItemClick(int position, View view);
-        void onCheckClick(CheckBox c,task temp,View view);
+
+        void onCheckClick(CheckBox c, task temp, View view);
     }
 }

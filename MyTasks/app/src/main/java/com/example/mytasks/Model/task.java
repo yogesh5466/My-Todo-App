@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey;
 
 
 @Entity(tableName = "notes")
-public class task{
+public class task {
 
     @PrimaryKey(autoGenerate = true)
     private int id;
@@ -35,11 +35,17 @@ public class task{
         return note;
     }
 
-    public String getComp() { return comp; }
+    public String getComp() {
+        return comp;
+    }
 
-    public String getTime() { return time; }
+    public String getTime() {
+        return time;
+    }
 
-    public String getName() { return name; }
+    public String getName() {
+        return name;
+    }
 
     public void setComp(String comp) {
         this.comp = comp;

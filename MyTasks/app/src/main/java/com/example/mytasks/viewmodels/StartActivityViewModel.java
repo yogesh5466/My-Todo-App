@@ -18,18 +18,18 @@ public class StartActivityViewModel extends AndroidViewModel {
     public StartActivityViewModel(@NonNull Application application) {
         super(application);
         repository = new TasksRepository(application);
-        mtask=repository.getall();
+        mtask = repository.getall();
     }
 
-    public void insert(task t){
+    public void insert(task t) {
         repository.insert(t);
     }
 
-    public void update(task t){
+    public void update(task t) {
         repository.update(t);
     }
 
-    public void delete(task t){
+    public void delete(task t) {
         repository.delete(t);
     }
 

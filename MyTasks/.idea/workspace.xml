@@ -9,28 +9,32 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ee0282f-74ac-4909-9f0c-6ec6ad4989cf" name="Default Changelist" comment="">
+    <list default="true" id="3ee0282f-74ac-4909-9f0c-6ec6ad4989cf" name="Default Changelist" comment="Switched to MVVC.">
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/Activity/Addnote.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/Activity/Addnote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/Activity/BaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/Activity/BaseActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/Activity/Editnote.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/Activity/Editnote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/Activity/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/Activity/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/Activity/StartActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/Adapter/tasklistadapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/Adapter/tasklistadapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/Listeners/OnObjectListFetchListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/Manager/database.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/Manager/TaskDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/Manager/TaskDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/Model/task.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/Model/task.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/Viewholder/tasklistviewholder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/Viewholder/tasklistviewholder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/repositories/TasksRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/repositories/TasksRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/viewmodels/StartActivityViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mytasks/viewmodels/StartActivityViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/add_edit_note.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/add_edit_note.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialog_edit_delete.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_edit_delete.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/progress_bar_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/progress_bar_dialog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/task_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/task_layout.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_29" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="3b93a891" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -75,7 +79,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="3b93a891" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-05T07:54:31.135Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-09T18:24:49.624Z" />
     <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/app" />
     <property name="ExportApk.BuildVariants" value="release" />
     <property name="ExportApk.SignV1" value="true" />
@@ -201,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591371768207</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Switched to MVVC.">
+      <created>1591726766259</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1591726766259</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -219,7 +230,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="&quot;added Project to Git&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;added Project to Git&quot;" />
+    <MESSAGE value="Switched to MVVC." />
+    <option name="LAST_COMMIT_MESSAGE" value="Switched to MVVC." />
   </component>
   <component name="WindowStateProjectService">
     <state x="245" y="189" key="#PSD" timestamp="1591705952458">
@@ -234,6 +246,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1591717583033" />
+    <state x="339" y="52" key="CommitChangelistDialog2" timestamp="1591727251155">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="339" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1591727251155" />
     <state width="1398" height="203" key="GridCell.Tab.0.bottom" timestamp="1591726076907">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
