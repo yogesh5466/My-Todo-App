@@ -3,15 +3,17 @@
     android:layout_width="300dp"
     android:layout_height="200dp"
     android:layout_gravity="center"
+    android:animateLayoutChanges="true"
+    android:background="@color/lightSkyColor"
     android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:fontFamily="monospace"
+        android:gravity="center_horizontal"
         android:text="My Tasks"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:textColor="@color/whiteColor"
         android:textSize="30sp" />
 
     <LinearLayout
@@ -25,6 +27,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_weight="0.5"
+            android:backgroundTint="@color/lightRedColor"
+            android:foreground="?android:attr/selectableItemBackground"
             android:text="Edit" />
 
         <Button
@@ -33,6 +37,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_weight="0.5"
+            android:backgroundTint="@color/lightRedColor"
+            android:foreground="?android:attr/selectableItemBackground"
             android:text="Delete" />
     </LinearLayout>
 

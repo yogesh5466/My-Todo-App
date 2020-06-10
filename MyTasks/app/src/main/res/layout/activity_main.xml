@@ -1,37 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
+    android:animateLayoutChanges="true"
     android:orientation="vertical">
 
-    <in.codeshuffle.typewriterview.TypeWriterView
-
-        android:id="@+id/welcome"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="50dp"
-        android:textColor="@color/whiteColor"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_weight="0.5">
 
-    <in.codeshuffle.typewriterview.TypeWriterView
+            <in.codeshuffle.typewriterview.TypeWriterView
 
-        android:id="@+id/greet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:textColor="@color/whiteColor"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+                android:id="@+id/welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <in.codeshuffle.typewriterview.TypeWriterView
+
+                android:id="@+id/greet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="10dp"
+                android:textSize="30sp"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="#FFFFFF">
+
+        </ImageView>
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/addnotes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/lightRedColor"
+        android:foreground="?android:attr/selectableItemBackground"
         android:text="ADD TODO">
 
     </Button>

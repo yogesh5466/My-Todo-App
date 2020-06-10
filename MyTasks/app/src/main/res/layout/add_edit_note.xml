@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:animateLayoutChanges="true"
     android:layout_height="match_parent">
 
     <ScrollView
@@ -12,6 +14,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@color/md_blue_300"
+            android:elevation="4dp"
             android:orientation="vertical"
             android:paddingLeft="24dp"
             android:paddingTop="40dp"
@@ -28,7 +33,6 @@
                 android:gravity="center_horizontal"
                 android:text="My Notes"
                 android:textAlignment="center"
-                android:textColor="@color/whiteColor"
                 android:textSize="25dp"
                 android:textStyle="bold" />
 
@@ -44,8 +48,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Name Of Todo"
-                    android:inputType="none"
-                    android:textColorHint="@color/blackColor" />
+                    android:inputType="none" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -59,8 +62,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Note"
-                    android:inputType="textPostalAddress"
-                    android:textColorHint="@color/blackColor" />
+                    android:inputType="textPostalAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -70,9 +72,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="24dp"
+                android:drawableTop="@drawable/ic_baseline_save_24"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:gravity="center"
                 android:text="ADD"
-                android:textSize="16dip" />
+                android:textSize="16sp" />
 
 
         </LinearLayout>

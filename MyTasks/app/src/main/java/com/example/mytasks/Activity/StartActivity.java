@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
@@ -38,12 +39,15 @@ public class StartActivity extends BaseActivity implements View.OnClickListener 
     private LinearLayout linearLayout;
     private FrameLayout frameLayout;
     private StartActivityViewModel startActivityViewModel;
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         add = findViewById(R.id.addnotes);
+        imageView = findViewById(R.id.imageview);
+        setimage();
         startActivityViewModel = ViewModelProviders.of(this).get(StartActivityViewModel.class);
         startActivityViewModel.getall().observe(this, new Observer<List<task>>() {
             @Override
@@ -188,6 +192,19 @@ public class StartActivity extends BaseActivity implements View.OnClickListener 
             t = new task(i.getStringExtra("tasknote"), i.getStringExtra("taskcomp"), i.getStringExtra("tasktime"), i.getStringExtra("taskname"));
             t.setId(i.getIntExtra("taskid", 0));
             startActivityViewModel.update(t);
+        }
+    }
+
+    private void setimage(){
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+        String getCurrentTime = sdf.format(c.getTime());
+        if (getCurrentTime.compareTo("12:00") < 0) {
+            imageView.setImageDrawable(getDrawable(R.drawable.ic_sunset));
+        } else if (getCurrentTime.compareTo("18:00") < 0) {
+            imageView.setImageDrawable(getDrawable(R.drawable.ic_sunny));
+        } else {
+            imageView.setImageDrawable(getDrawable(R.drawable.ic_moon));
         }
     }
 
