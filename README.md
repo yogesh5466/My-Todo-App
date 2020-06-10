@@ -1,5 +1,5 @@
 # My-Todo-App
-Todo App in Android using MVVC Architecture.
+Todo App in Android using MVVM Architecture.
 
 
 The opening screen(StartActivity.java) has welcome text using time of the day, AddTodo button and Recyclerview for showing complete Todo List.
