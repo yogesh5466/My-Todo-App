@@ -11,3 +11,8 @@ We use Recyclerview to display the complete todo list in MainActivity.java.
 We use Checkbox to denote done and not done.
 
 All the endpoints and database actions are provided in Repository and the Activity send data with the help of viewmodel. The activity observes livedata and updates recyclerview. MVVM provides seperation of concerns and activity/fragment only updates UI, it does not have any business logic or database actions in it. Activity should be as dumb as posible.
+
+## Output
+![output](https://github.com/yogesh5466/My-Todo-App/blob/master/output_1.jpg)
+
+![output](https://github.com/yogesh5466/My-Todo-App/blob/master/output_2.jpg)
